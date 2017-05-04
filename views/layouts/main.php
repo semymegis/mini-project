@@ -25,50 +25,79 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => 'My Company',
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
-            )
-        ],
-    ]);
-    NavBar::end();
-    ?>
-
     <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= $content ?>
+  
+
+        <div class="col-lg-13 col-md-12">
+            <div class="row">
+                <div class="col-md-7 col-sm-11 col-xs-12 col-md-offset-2 main-wrap">
+                    <div class="nav-bar">
+                        <a href="/web"><?php echo Html::img('@web/images/navbar.jpg', ['class' => '']) ?></a>
+                    </div>
+
+                    <div class="garena-logo">
+
+                    </div>
+
+                    <div class="content-wrap" id="style-1">
+                            <?php echo Nav::widget([
+                                'options' => ['class' => 'navbar-nav navbar-right'],
+                                'items' => [
+                                   
+                                    // ['label' => 'About', 'url' => ['/site/about']],
+                                    // ['label' => 'Contact', 'url' => ['/site/contact']],
+                                    Yii::$app->user->isGuest ? (
+                                    's'
+                                    ) : (
+                                        '<li>'
+                                        . Html::beginForm(['/site/logout'], 'post')
+                                        . Html::submitButton(
+                                            '<span class="caption-white">Hi, ' . Yii::$app->user->identity->nama . ' </span>[Keluar] &nbsp;',
+                                            ['class' => 'btn btn-link logout']
+                                        )
+                                        . Html::endForm()
+                                        . '</li>'
+                                    )
+                                ],
+                            ]);
+                            ?>
+                            <div class="col-md-12">
+                                
+                                    <?= $content ?>
+                                
+                            </div>
+                    </div>
+
+                    
+
+
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+
     </div>
-</div>
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-4 col-sm-3 col-xs-2 col-md-offset-2">
+                    <a href="/web/"><?php echo Html::img('@web/images/garenafooter.png', ['class' => 'logo']) ?></a>
+                </div>
+                
+                <div class="col-md-2 col-sm-3 col-xs-5 col-md-offset-1 col-xs-offset-5 ">
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+                    <div class="pull-right">
+                    <a href="#"><?php echo Html::img('@web/images/fb.jpg', ['class' => 'socmed']) ?></a>
+                    <a href="#"><?php echo Html::img('@web/images/twitter.jpg', ['class' => 'socmed']) ?></a>
+                    <a href="#"><?php echo Html::img('@web/images/utube.png', ['class' => 'socmed']) ?></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
 

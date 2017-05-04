@@ -1,29 +1,235 @@
 html,
 body {
     height: 100%;
+    background: url("../images/bigbg.jpg");
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: center;
 }
 
 .wrap {
     min-height: 100%;
     height: auto;
-    margin: 0 auto -60px;
+    margin: 0 auto -104px;
     padding: 0 0 60px;
+
 }
 
 .wrap > .container {
     padding: 70px 15px 20px;
 }
 
+.garena-logo {
+    background: url("../images/atas.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+    width: 100%;
+    /*border: 1px #b59c3f solid;*/
+    height: 298.2px;
+    box-shadow: 80px 0 200px 60px #000, -80px 0 200px 60px #000;
+
+}
+
+.main-wrap {
+    /*border: 1px #b59c3f solid;*/
+    margin-top: -70px;
+    /*height: 100%;*/
+   
+}
+
+.reg {
+    color: #fff;
+}
+
+.buttons {
+    background: url("../images/button.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 50px;
+    border:none;
+    background-size: 100%;
+    color: #126bbf;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.buttons:hover {
+    background: url("../images/button_hover.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 50px;
+    border:none;
+    background-size: 100%;
+    color: #126bbf;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.content-wrap {
+    height: 100%;
+    background :url("../images/bgcontent.jpg");
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: 635px;
+    box-shadow: 50px 0 100px -4px #000, -50px 0 100px -4px #000;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: -3px;
+}
+
+.field .form-group {
+    margin:0px;
+    padding: 0px;
+}
+.big {
+    font-size: 30px;
+    color: #ffd76e;
+}
+.biasa {
+    font-size: 20px;
+    margin-top: -30px;
+}
+.yellow {
+    color: #ffd76e;
+}
+.nav-bar {
+
+    width: 500px;
+
+    height: 100px;
+    position: fixed;
+    margin-left: 90px;
+    top: 0;
+   
+}
+/*
+ *  STYLE 2
+ */
+
+#style-1::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #000;
+}
+
+#style-1::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #555;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+
+#style-2::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #D62929;
+}
+
+.borderless td, .borderless th {
+    border: none;
+}
+
+.table {
+    padding: -10px; 
+}
+
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+    border: none;
+}
+
+.box {
+    background-color: #000;
+    border: 1px #333 solid;
+    width: 100%;
+    margin:10px auto;
+}
+
 .footer {
-    height: 60px;
-    background-color: #f5f5f5;
+    height: auto;
+    background:url("../images/footerbg.jpg");
+    background-repeat: repeat-x;
     border-top: 1px solid #ddd;
     padding-top: 20px;
+    margin-top: 25px;
+}
+
+.tittle {
+    text-align: center;
+    color: #fff;
+    line-height: 0px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.box input {
+    width: 60%;
+}
+
+.box select {
+    width: 40%;
+}
+.box textarea{
+    width: 60%;
+}
+
+.caption-white {
+    color: #fff;
+}
+
+.footer .logo {
+    margin-bottom: 10px;
+}
+
+.footer .socmed {
+    margin-top: 15px;
+    width: 40px;
+    height: 40px;
 }
 
 .jumbotron {
     text-align: center;
     background-color: transparent;
+}
+
+.button-login {
+    color: #fff;
+    background-color: #a31e20;
+    height: 80px;
+    width: 100px;
+    border-radius: 15px;
+    margin-right: 20px;
+    float: right;
+    border:none;
 }
 
 .jumbotron .btn {
